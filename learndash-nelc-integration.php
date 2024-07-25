@@ -119,3 +119,14 @@ function learndash_notify_action_check() {
 	}
 
 }
+
+// $user = learndash_nelc_integration()->statementConstants();
+// // require_once('includes/Interactions/StatementConstants.php');
+
+// // $user = new StatementConstants();
+
+// print_r( [$user->br_name,$user->br_os,$user->br_ver] );
+
+// exit;
+
+//$app = new Learndash_NELC_integration_Admin_API();
