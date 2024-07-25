@@ -23,9 +23,12 @@ Installing "Learndash NELC Integration" can be done either by searching for "Lea
 
 ## Screenshots
 
-1. **Dashboard Overview** - Overview of the plugin dashboard and main features.
-2. **Settings Page** - Settings page where you can configure NELC endpoints and other options.
-3. **Activity Logs** - Logs of activities sent to NELC for monitoring and troubleshooting.
+1. **Settings Page** - Settings page where you can configure NELC endpoints and other options.
+![Main Page Screenshot](assets/images/dashpoard_general.png)
+2. **Notifications settings** - Notification settings tab and options to link courses or not.
+![Notifications settings](assets/images/dashpoard_notific.png)
+3. **Testing tab** -Check the success of the connection with NELC and make sure that the data is flowing to their servers properly.
+![Testing tab](assets/images/dashpoard_test.png)
 
 ## Frequently Asked Questions
 
