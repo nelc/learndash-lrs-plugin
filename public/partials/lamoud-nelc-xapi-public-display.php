@@ -5,7 +5,7 @@
  *
  * This file is used to markup the public-facing aspects of the plugin.
  *
- * @link       https://lamoud.com
+ * @link       https://wa.me/00201062332549
  * @since      1.0.3
  *
  * @package    lamoud_nelc_xapi

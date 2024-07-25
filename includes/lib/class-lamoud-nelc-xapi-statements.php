@@ -559,7 +559,7 @@ class NELC_Integration_Statements {
                 );
             break;
             default:
-                echo "mmmmmmmmmmmmmmmmmmmmmmmmmmm";
+                echo "Register statment";
             }
 		// Register statment.
 		//add_action( 'init', array( $this, 'register_statment' ) );

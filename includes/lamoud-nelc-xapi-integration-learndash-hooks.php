@@ -158,20 +158,20 @@ function topic_completed_hook( $lesson_data )
         update_user_meta(get_current_user_id(), 'lamoud_nelc_xapi_notify_action', $response['body']);
     }
 	
-// 	echo "</br>";
-// 	echo "lesson_completed";
-// 	echo "<pre>";
-// 	print_r($response1['body']);
-// 	echo "</pre>";
-// 	echo "</br>";
-// 	echo "=========================================================";
-// 	echo "</br>";
-// 	echo "progressed";
-// 	echo "</br>";
-// 	echo "<pre>";
-// 	print_r($response['body']);
-// 	echo "</pre>";
-// 	exit;
+    // 	echo "</br>";
+    // 	echo "lesson_completed";
+    // 	echo "<pre>";
+    // 	print_r($response1['body']);
+    // 	echo "</pre>";
+    // 	echo "</br>";
+    // 	echo "=========================================================";
+    // 	echo "</br>";
+    // 	echo "progressed";
+    // 	echo "</br>";
+    // 	echo "<pre>";
+    // 	print_r($response['body']);
+    // 	echo "</pre>";
+    // 	exit;
     
 }
 
@@ -310,15 +310,3 @@ function quiz_rated_hook( $quizdata, $user) {
 
 
 }
-
-// add_action('wp_footer', 'test_test2');
-// function test_test2()
-// {
-// 	echo '<pre>';
-// 	echo "quizUrl: ";
-//     print_r( get_user_meta(get_current_user_id(), 'notf_notf', true) );
-// 	echo '</pre>';
-	
-
-	
-// }

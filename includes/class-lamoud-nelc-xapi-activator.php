@@ -3,7 +3,7 @@
 /**
  * Fired during plugin activation
  *
- * @link       https://lamoud.com
+ * @link       https://wa.me/00201062332549
  * @since      1.0.3
  *
  * @package    lamoud_nelc_xapi

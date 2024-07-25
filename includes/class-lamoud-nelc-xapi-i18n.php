@@ -37,7 +37,7 @@ class lamoud_nelc_xapi_i18n {
 		load_plugin_textdomain(
 			'lamoud-nelc-xapi',
 			false,
-			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
+			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/lang/'
 		);
 
 	}

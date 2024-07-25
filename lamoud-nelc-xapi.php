@@ -24,12 +24,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 // Load plugin class files.
 require_once 'includes/class-lamoud-nelc-xapi.php';
 require_once 'includes/class-lamoud-nelc-xapi-settings.php';
-//require_once 'includes/lamoud-nelc-xapi-integration-tutor-hooks.php';
 require_once 'includes/lamoud-nelc-xapi-integration-learndash-hooks.php';
 
 // Load plugin libraries.
 require_once 'includes/lib/class-lamoud-nelc-xapi-admin-api.php';
-require_once 'includes/lib/class-lamoud-nelc-xapi-post-type.php';
 require_once 'includes/lib/class-lamoud-nelc-xapi-statements.php';
 require_once 'includes/lib/class-lamoud-nelc-xapi-interactions.php';
 

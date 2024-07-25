@@ -244,28 +244,6 @@ class NELC_Integration {
 	} // End __construct ()
 
 	/**
-	 * Register post type function.
-	 *
-	 * @param string $post_type Post Type.
-	 * @param string $plural Plural Label.
-	 * @param string $single Single Label.
-	 * @param string $description Description.
-	 * @param array  $options Options array.
-	 *
-	 * @return bool|string|NELC_Integration_Post_Type
-	 */
-	public function register_post_type( $post_type = '', $plural = '', $single = '', $description = '', $options = array() ) {
-
-		if ( ! $post_type || ! $plural || ! $single ) {
-			return false;
-		}
-
-		$post_type = new NELC_Integration_Post_Type( $post_type, $plural, $single, $description, $options );
-
-		return $post_type;
-	}
-
-	/**
 	 * Wrapper function to register a new statment.
 	 *
 	 * @param string $statment Statment.
