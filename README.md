@@ -11,7 +11,7 @@ The Learndash NELC Integration plugin is designed to link the WordPress Learndas
 Installing "Learndash NELC Integration" can be done either by searching for "Learndash NELC Integration" via the "Plugins > Add New" screen in your WordPress dashboard, or by following these steps:
 
 1. Download the plugin via WordPress.org or GitHub:
-   - [GitHub Repository](https://github.com/lamoud/learndash-lrs-plugin.git)
+   - [GitHub Repository](https://github.com/nelc/learndash-lrs-plugin.git)
 2. If downloading from GitHub:
    - Go to the GitHub repository and click on the "Code" button.
    - Select "Download ZIP".
