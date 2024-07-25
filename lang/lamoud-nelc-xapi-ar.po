@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: lamoud-nelc-xapi 1.0.2\n"
-"POT-Creation-Date: 2023-07-29 15:07+0300\n"
-"PO-Revision-Date: 2023-07-29 15:08+0300\n"
+"POT-Creation-Date: 2024-07-25 12:15+0300\n"
+"PO-Revision-Date: 2024-07-25 12:16+0300\n"
 "Last-Translator: \n"
 "Language-Team: info@lamoud.com\n"
 "Language: ar_EG\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4.4\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;esc_attr_e;esc_html__;esc_html_e;sprintf\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -39,7 +39,8 @@ msgstr "اختبار الدمج مع المركز الوطني NELC"
 
 #: includes/class-lamoud-nelc-xapi-settings.php:131
 #: includes/class-lamoud-nelc-xapi-settings.php:132
-#: includes/class-lamoud-nelc-xapi.php:154
+#: includes/class-lamoud-nelc-xapi.php:149
+#: includes/class-lamoud-nelc-xapi.php:167
 msgid "NELC Integration"
 msgstr "الدمج مع  NELC"
 
@@ -103,6 +104,7 @@ msgid "An alert appears to the trainee if the profile is not completed."
 msgstr "تنبيه يظهر للمستخدم في حالة عدم إكال ملفه الشخصي."
 
 #: includes/class-lamoud-nelc-xapi-settings.php:268
+#: includes/class-lamoud-nelc-xapi.php:144
 msgid "Please complete your profile to be able to enroll in the courses"
 msgstr "من فضلك قم باكمال ملفك الشخصي لتتمكن من الإلتحاق بالدورات"
 
@@ -123,19 +125,19 @@ msgstr ""
 "عند التفعيل ، يتم ربط جميع الدورات تلقائيًا. في حالة الإلغاء ، يظهر خيار في "
 "صفحة إعدادات الدورة التدريبية لإلغاء ربط  الدورة."
 
-#: includes/class-lamoud-nelc-xapi-settings.php:282
+#: includes/class-lamoud-nelc-xapi-settings.php:281
 msgid "Report arrival alert"
 msgstr "تنبيه وصول التقرير"
 
-#: includes/class-lamoud-nelc-xapi-settings.php:283
+#: includes/class-lamoud-nelc-xapi-settings.php:282
 msgid "Show alerts stating the arrival of reports to the National Center."
 msgstr "إظهار تنبيهات تفيد بوصول التقارير للمركز الوطني."
 
-#: includes/class-lamoud-nelc-xapi-settings.php:329
+#: includes/class-lamoud-nelc-xapi-settings.php:327
 msgid "integration testing"
 msgstr "اختبار الدمج"
 
-#: includes/class-lamoud-nelc-xapi-settings.php:330
+#: includes/class-lamoud-nelc-xapi-settings.php:328
 msgid ""
 "The following form enables you to test integration with the National Center "
 "for E-Learning NELC:"
@@ -143,362 +145,132 @@ msgstr ""
 "يمكنك النموذج التالي من اختبار الدمج مع المركز الوطني للتعليم الإلكتروني "
 "NELC:"
 
-#: includes/class-lamoud-nelc-xapi-settings.php:334
+#: includes/class-lamoud-nelc-xapi-settings.php:332
 msgid "Select statement"
 msgstr "اختر statment"
 
-#: includes/class-lamoud-nelc-xapi-settings.php:335
+#: includes/class-lamoud-nelc-xapi-settings.php:333
 msgid "Select statement."
 msgstr "اختر statement."
 
-#: includes/class-lamoud-nelc-xapi-settings.php:462
+#: includes/class-lamoud-nelc-xapi-settings.php:469
 msgid "NELC Integration Settings"
 msgstr "إعدادات الدمج مع المركز الوطني"
 
-#: includes/class-lamoud-nelc-xapi-settings.php:518
+#: includes/class-lamoud-nelc-xapi-settings.php:525
 msgid "Test now"
-msgstr ""
+msgstr "اختبر الآن"
 
-#: includes/class-lamoud-nelc-xapi-settings.php:523
+#: includes/class-lamoud-nelc-xapi-settings.php:530
 msgid "Save Settings"
 msgstr "حفظ الإعدادات"
 
-#: includes/class-lamoud-nelc-xapi-settings.php:561
+#: includes/class-lamoud-nelc-xapi-settings.php:568
 msgid "Cloning of NELC_Integration_API is forbidden."
-msgstr ""
+msgstr "يحظر استنساخ NELC_Integration_API."
 
-#: includes/class-lamoud-nelc-xapi-settings.php:570
+#: includes/class-lamoud-nelc-xapi-settings.php:577
 msgid "Unserializing instances of NELC_Integration_API is forbidden."
-msgstr ""
+msgstr "يحظر إلغاء تجميع مثيلات NELC_Integration_API."
 
-#: includes/class-lamoud-nelc-xapi.php:181
+#: includes/class-lamoud-nelc-xapi.php:182
 msgid "Upon activation, the courses will linked with NELC."
 msgstr "عند التفعيل سيتم ربط الدورة مع المركز الوطني NELC."
 
-#: includes/class-lamoud-nelc-xapi.php:383
+#: includes/class-lamoud-nelc-xapi.php:218
+msgid "National ID"
+msgstr "رقم الهوية"
+
+#: includes/class-lamoud-nelc-xapi.php:403
 msgid "Cloning of NELC_Integration is forbidden"
-msgstr ""
+msgstr "استنساخ NELC_Integration ممنوع"
 
-#: includes/class-lamoud-nelc-xapi.php:393
+#: includes/class-lamoud-nelc-xapi.php:413
 msgid "Unserializing instances of NELC_Integration is forbidden"
-msgstr ""
+msgstr "إلغاء تجميع مثيلات NELC_Integration ممنوع"
 
-#: includes/lib/class-lamoud-nelc-xapi-admin-api.php:179
+#: includes/lib/class-lamoud-nelc-xapi-admin-api.php:172
 msgid "Upload an image"
-msgstr ""
+msgstr "رفع صورة"
 
-#: includes/lib/class-lamoud-nelc-xapi-admin-api.php:179
+#: includes/lib/class-lamoud-nelc-xapi-admin-api.php:172
 msgid "Use image"
-msgstr ""
+msgstr "استخدم صورة"
 
-#: includes/lib/class-lamoud-nelc-xapi-admin-api.php:179
+#: includes/lib/class-lamoud-nelc-xapi-admin-api.php:172
 msgid "Upload new image"
-msgstr ""
+msgstr "رفع صورة جديدة"
 
-#: includes/lib/class-lamoud-nelc-xapi-admin-api.php:180
+#: includes/lib/class-lamoud-nelc-xapi-admin-api.php:173
 msgid "Remove image"
 msgstr ""
 
-#: includes/lib/class-lamoud-nelc-xapi-post-type.php:104
-#: includes/lib/class-lamoud-nelc-xapi-taxonomy.php:106
-#, php-format
-msgid "Add New %s"
-msgstr ""
+#: lamoud-nelc-xapi.php:67
+msgid "The report has been sent to NELC"
+msgstr "تم إرسال التقرير للمركز الوطني."
 
-#: includes/lib/class-lamoud-nelc-xapi-post-type.php:105
-#: includes/lib/class-lamoud-nelc-xapi-taxonomy.php:103
-#, php-format
-msgid "Edit %s"
-msgstr ""
+#: lamoud-nelc-xapi.php:70
+msgid "The report was not sent to NELC"
+msgstr "لم يتم إرسال التقرير للمركز الوطني."
 
-#: includes/lib/class-lamoud-nelc-xapi-post-type.php:106
-#, php-format
-msgid "New %s"
-msgstr ""
-
-#: includes/lib/class-lamoud-nelc-xapi-post-type.php:107
-#: includes/lib/class-lamoud-nelc-xapi-taxonomy.php:102
-#, php-format
-msgid "All %s"
-msgstr ""
-
-#: includes/lib/class-lamoud-nelc-xapi-post-type.php:108
-#: includes/lib/class-lamoud-nelc-xapi-taxonomy.php:104
-#, php-format
-msgid "View %s"
-msgstr ""
-
-#: includes/lib/class-lamoud-nelc-xapi-post-type.php:109
-#: includes/lib/class-lamoud-nelc-xapi-taxonomy.php:110
-#, php-format
-msgid "Search %s"
-msgstr ""
-
-#: includes/lib/class-lamoud-nelc-xapi-post-type.php:110
-#, php-format
-msgid "No %s Found"
-msgstr ""
-
-#: includes/lib/class-lamoud-nelc-xapi-post-type.php:111
-#, php-format
-msgid "No %s Found In Trash"
-msgstr ""
-
-#: includes/lib/class-lamoud-nelc-xapi-post-type.php:112
-#: includes/lib/class-lamoud-nelc-xapi-taxonomy.php:108
-#, php-format
-msgid "Parent %s"
-msgstr ""
-
-#: includes/lib/class-lamoud-nelc-xapi-post-type.php:156
-#, php-format
-msgid "%1$s updated. %2$sView %3$s%4$s."
-msgstr ""
-
-#: includes/lib/class-lamoud-nelc-xapi-post-type.php:157
-msgid "Custom field updated."
-msgstr ""
-
-#: includes/lib/class-lamoud-nelc-xapi-post-type.php:158
-msgid "Custom field deleted."
-msgstr ""
-
-#: includes/lib/class-lamoud-nelc-xapi-post-type.php:159
-#, php-format
-msgid "%1$s updated."
-msgstr ""
-
-#: includes/lib/class-lamoud-nelc-xapi-post-type.php:160
-#, php-format
-msgid "%1$s restored to revision from %2$s."
-msgstr ""
-
-#: includes/lib/class-lamoud-nelc-xapi-post-type.php:161
-#, php-format
-msgid "%1$s published. %2$sView %3$s%4s."
-msgstr ""
-
-#: includes/lib/class-lamoud-nelc-xapi-post-type.php:162
-#, php-format
-msgid "%1$s saved."
-msgstr ""
-
-#: includes/lib/class-lamoud-nelc-xapi-post-type.php:163
-#, php-format
-msgid "%1$s submitted. %2$sPreview post%3$s%4$s."
-msgstr ""
-
-#: includes/lib/class-lamoud-nelc-xapi-post-type.php:164
-#, php-format
-msgid "%1$s scheduled for: %2$s. %3$sPreview %4$s%5$s."
-msgstr ""
-
-#: includes/lib/class-lamoud-nelc-xapi-post-type.php:164
-msgid "M j, Y @ G:i"
-msgstr ""
-
-#: includes/lib/class-lamoud-nelc-xapi-post-type.php:165
-#, php-format
-msgid "%1$s draft updated. %2$sPreview %3$s%4$s."
-msgstr ""
-
-#: includes/lib/class-lamoud-nelc-xapi-taxonomy.php:105
-#, php-format
-msgid "Update %s"
-msgstr ""
-
-#: includes/lib/class-lamoud-nelc-xapi-taxonomy.php:107
-#, php-format
-msgid "New %s Name"
-msgstr ""
-
-#: includes/lib/class-lamoud-nelc-xapi-taxonomy.php:109
-#, php-format
-msgid "Parent %s:"
-msgstr ""
-
-#: includes/lib/class-lamoud-nelc-xapi-taxonomy.php:111
-#, php-format
-msgid "Popular %s"
-msgstr ""
-
-#: includes/lib/class-lamoud-nelc-xapi-taxonomy.php:112
-#, php-format
-msgid "Separate %s with commas"
-msgstr ""
-
-#: includes/lib/class-lamoud-nelc-xapi-taxonomy.php:113
-#, php-format
-msgid "Add or remove %s"
-msgstr ""
-
-#: includes/lib/class-lamoud-nelc-xapi-taxonomy.php:114
-#, php-format
-msgid "Choose from the most used %s"
-msgstr ""
-
-#: includes/lib/class-lamoud-nelc-xapi-taxonomy.php:115
-#, php-format
-msgid "No %s found"
-msgstr ""
-
-#: public/class-lamoud-nelc-xapi-public.php:177
-#: public/class-lamoud-nelc-xapi-public.php:209
-#: public/class-lamoud-nelc-xapi-public.php:422
-#: public/class-lamoud-nelc-xapi-public.php:455
-#: public/class-lamoud-nelc-xapi-public.php:699
-#: public/class-lamoud-nelc-xapi-public.php:731
-#: public/class-lamoud-nelc-xapi-public.php:765
-#: public/class-lamoud-nelc-xapi-public.php:797
-#: public/class-lamoud-nelc-xapi-public.php:948
-#: public/class-lamoud-nelc-xapi-public.php:980
 #, fuzzy
-#| msgid "Delivered to NELC"
-msgid "Delivery to NELC"
-msgstr "تم التسليم للمركز الوطني NELC"
+#~| msgid "Delivered to NELC"
+#~ msgid "Delivery to NELC"
+#~ msgstr "تم التسليم للمركز الوطني NELC"
 
-#: public/class-lamoud-nelc-xapi-public.php:181
-#: public/class-lamoud-nelc-xapi-public.php:213
-#: public/class-lamoud-nelc-xapi-public.php:426
-#: public/class-lamoud-nelc-xapi-public.php:459
-#: public/class-lamoud-nelc-xapi-public.php:703
-#: public/class-lamoud-nelc-xapi-public.php:735
-#: public/class-lamoud-nelc-xapi-public.php:769
-#: public/class-lamoud-nelc-xapi-public.php:801
-#: public/class-lamoud-nelc-xapi-public.php:952
-#: public/class-lamoud-nelc-xapi-public.php:984
-msgid "Status: "
-msgstr ""
-
-#: public/class-lamoud-nelc-xapi-public.php:182
 #, fuzzy
-#| msgid ""
-#| "You have completed the course,, and a report has been sent to the "
-#| "National Center NELC"
-msgid ""
-"You have been registered in the course, and a report has been sent to the "
-"National Center NELC"
-msgstr "لقد انهيت الدورة، وتم إرسال تقرير للمركز الوطني NELC"
+#~| msgid ""
+#~| "You have completed the course,, and a report has been sent to the "
+#~| "National Center NELC"
+#~ msgid ""
+#~ "You have been registered in the course, and a report has been sent to the "
+#~ "National Center NELC"
+#~ msgstr "لقد انهيت الدورة، وتم إرسال تقرير للمركز الوطني NELC"
 
-#: public/class-lamoud-nelc-xapi-public.php:187
-#: public/class-lamoud-nelc-xapi-public.php:219
-#: public/class-lamoud-nelc-xapi-public.php:432
-#: public/class-lamoud-nelc-xapi-public.php:465
-#: public/class-lamoud-nelc-xapi-public.php:709
-#: public/class-lamoud-nelc-xapi-public.php:741
-#: public/class-lamoud-nelc-xapi-public.php:775
-#: public/class-lamoud-nelc-xapi-public.php:807
-#: public/class-lamoud-nelc-xapi-public.php:958
-#: public/class-lamoud-nelc-xapi-public.php:990
-msgid "Status Code: "
-msgstr ""
-
-#: public/class-lamoud-nelc-xapi-public.php:191
-#: public/class-lamoud-nelc-xapi-public.php:223
-#: public/class-lamoud-nelc-xapi-public.php:436
-#: public/class-lamoud-nelc-xapi-public.php:469
-#: public/class-lamoud-nelc-xapi-public.php:713
-#: public/class-lamoud-nelc-xapi-public.php:745
-#: public/class-lamoud-nelc-xapi-public.php:779
-#: public/class-lamoud-nelc-xapi-public.php:811
-#: public/class-lamoud-nelc-xapi-public.php:962
-#: public/class-lamoud-nelc-xapi-public.php:994
-msgid "Body: "
-msgstr ""
-
-#: public/class-lamoud-nelc-xapi-public.php:197
-#: public/class-lamoud-nelc-xapi-public.php:229
-#: public/class-lamoud-nelc-xapi-public.php:442
-#: public/class-lamoud-nelc-xapi-public.php:475
-#: public/class-lamoud-nelc-xapi-public.php:719
-#: public/class-lamoud-nelc-xapi-public.php:751
-#: public/class-lamoud-nelc-xapi-public.php:785
-#: public/class-lamoud-nelc-xapi-public.php:817
-#: public/class-lamoud-nelc-xapi-public.php:968
-#: public/class-lamoud-nelc-xapi-public.php:1000
-msgid "Continue"
-msgstr ""
-
-#: public/class-lamoud-nelc-xapi-public.php:214
-#: public/class-lamoud-nelc-xapi-public.php:460
-#: public/class-lamoud-nelc-xapi-public.php:985
 #, fuzzy
-#| msgid ""
-#| "No report was sent to NELC on completion of the unit, please ensure your "
-#| "profile is complete or contact us immediately."
-msgid ""
-"No report has been sent to NELC, please ensure your profile is complete or "
-"contact us immediately."
-msgstr ""
-"لم يتم إرسال تقرير للمركز الوطني، برجاء التأكد من إكتمال ملفك  الشخصي "
-"والتواصل معنا في الحال."
+#~| msgid ""
+#~| "No report was sent to NELC on completion of the unit, please ensure your "
+#~| "profile is complete or contact us immediately."
+#~ msgid ""
+#~ "No report has been sent to NELC, please ensure your profile is complete "
+#~ "or contact us immediately."
+#~ msgstr ""
+#~ "لم يتم إرسال تقرير للمركز الوطني، برجاء التأكد من إكتمال ملفك  الشخصي "
+#~ "والتواصل معنا في الحال."
 
-#: public/class-lamoud-nelc-xapi-public.php:316
-#: public/class-lamoud-nelc-xapi-public.php:427
-msgid "The report was submitted to the NELC successfully"
-msgstr ""
-
-#: public/class-lamoud-nelc-xapi-public.php:704
-msgid "Your course progress has been reported to NELC."
-msgstr ""
-
-#: public/class-lamoud-nelc-xapi-public.php:736
 #, fuzzy
-#| msgid ""
-#| "No report was sent to NELC on completion of the unit, please ensure your "
-#| "profile is complete or contact us immediately."
-msgid ""
-"Your course progress has not been reported to NELC, please ensure that your "
-"profile is complete and contact us immediately."
-msgstr ""
-"لم يتم إرسال تقرير للمركز الوطني، برجاء التأكد من إكتمال ملفك  الشخصي "
-"والتواصل معنا في الحال."
+#~| msgid ""
+#~| "No report was sent to NELC on completion of the unit, please ensure your "
+#~| "profile is complete or contact us immediately."
+#~ msgid ""
+#~ "Your course progress has not been reported to NELC, please ensure that "
+#~ "your profile is complete and contact us immediately."
+#~ msgstr ""
+#~ "لم يتم إرسال تقرير للمركز الوطني، برجاء التأكد من إكتمال ملفك  الشخصي "
+#~ "والتواصل معنا في الحال."
 
-#: public/class-lamoud-nelc-xapi-public.php:770
-msgid "Your quiz attempt has been reported to NELC."
-msgstr ""
-
-#: public/class-lamoud-nelc-xapi-public.php:802
 #, fuzzy
-#| msgid ""
-#| "No report was sent to NELC on completion of the unit, please ensure your "
-#| "profile is complete or contact us immediately."
-msgid ""
-"Your quiz attempt has not been reported to NELC, please ensure that your "
-"profile is complete and contact us immediately."
-msgstr ""
-"لم يتم إرسال تقرير للمركز الوطني، برجاء التأكد من إكتمال ملفك  الشخصي "
-"والتواصل معنا في الحال."
+#~| msgid ""
+#~| "No report was sent to NELC on completion of the unit, please ensure your "
+#~| "profile is complete or contact us immediately."
+#~ msgid ""
+#~ "Your quiz attempt has not been reported to NELC, please ensure that your "
+#~ "profile is complete and contact us immediately."
+#~ msgstr ""
+#~ "لم يتم إرسال تقرير للمركز الوطني، برجاء التأكد من إكتمال ملفك  الشخصي "
+#~ "والتواصل معنا في الحال."
 
-#: public/class-lamoud-nelc-xapi-public.php:953
 #, fuzzy
-#| msgid ""
-#| "You have completed the course,, and a report has been sent to the "
-#| "National Center NELC"
-msgid ""
-"You have completed the course, and a report has been sent to the National "
-"Center NELC"
-msgstr "لقد انهيت الدورة، وتم إرسال تقرير للمركز الوطني NELC"
-
-#: public/class-lamoud-nelc-xapi-public.php:1140
-#: public/class-lamoud-nelc-xapi-public.php:1173
-#: public/class-lamoud-nelc-xapi-public.php:1218
-msgid "National ID"
-msgstr ""
-
-#: public/class-lamoud-nelc-xapi-public.php:1190
-msgid "Please enter your National ID."
-msgstr ""
-
-#: public/class-lamoud-nelc-xapi-public.php:1227
-msgid "Please enter your national ID."
-msgstr ""
+#~| msgid ""
+#~| "You have completed the course,, and a report has been sent to the "
+#~| "National Center NELC"
+#~ msgid ""
+#~ "You have completed the course, and a report has been sent to the National "
+#~ "Center NELC"
+#~ msgstr "لقد انهيت الدورة، وتم إرسال تقرير للمركز الوطني NELC"
 
 #~ msgid "Course progression"
 #~ msgstr "التقدم في الدورة"
-
-#~ msgid "A report has been sent to NELC that the unit has finished."
-#~ msgstr "تم إرسال التقرير للمركز الوطني، بإنتهاء الوحدة."
 
 #~ msgid "Ok"
 #~ msgstr "حسناً"
