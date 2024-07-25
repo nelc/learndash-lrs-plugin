@@ -37,12 +37,12 @@ This plugin is specifically crafted to streamline integration with NELC, providi
 
 ### 1.0.0
 
-* 2024-11-28
+* 2023-11-28
 * Initial release
 
 ## Upgrade Notice
 
 ### 1.0.0
 
-* 2024-11-28
+* 2023-11-28
 * Initial release
