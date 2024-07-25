@@ -1,7 +1,7 @@
 /**
- * Learndash NELC Integration js settings.
+ * Plugin Template js settings.
  *
- *  @package Learndash NELC Integration/Settings
+ *  @package WordPress Plugin Template/Settings
  */
 
 jQuery( document ).ready(

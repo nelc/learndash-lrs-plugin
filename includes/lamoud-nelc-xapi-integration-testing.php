@@ -2,13 +2,13 @@
 <?php
 $test = '';
 
-if( isset( $_POST['lrs_xapi_select_statement'] ) ){
-    $test = $_POST['lrs_xapi_select_statement'];
-    
+if( isset( $_POST['lnx_xapi_select_statement'] ) ){
+    $test = $_POST['lnx_xapi_select_statement'];
+
     $response = null;
     switch ($test) {
         case 'register':
-            $body = learndash_nelc_integration()->register_statement( 'registered', [
+            $body = NELC_Integration()->register_statment( 'registered', [
                 'name' => 'Mahmoud Hassan',
                 'email' => 'betalamoud@gmail.com',
                 'courseId' => '123',
@@ -18,24 +18,22 @@ if( isset( $_POST['lrs_xapi_select_statement'] ) ){
                 'inst_email' => 'mrhassan@test.com',
             ]);
             
-            $response = learndash_nelc_integration()->register_interactions( $body );
+            $response = NELC_Integration()->register_interactions( $body );
         case 'initialized':
-
-            $response = learndash_nelc_integration()->learndashXapiRequest( 'initialized', [
-                'actor' => 'Mahmoud Hassan',
-                'actorEmail' => 'betalamoud@gmail.com',
+            $body = NELC_Integration()->register_statment( 'initialized', [
+                'name' => 'Mahmoud Hassan',
+                'email' => 'betalamoud@gmail.com',
                 'courseId' => '123',
-                'courseTitle' => 'Test course',
+                'courseName' => 'Test course',
                 'courseDesc' => 'course Desc',
                 'instructor' => 'Mr Hassan',
-                'instructorEmail' => 'mrhassan@test.com',
+                'inst_email' => 'mrhassan@test.com',
             ]);
             
-            
-            //$response = learndash_nelc_integration()->register_interactions( $body );
+            $response = NELC_Integration()->register_interactions( $body );
         break;
         case 'watched':
-            $body = learndash_nelc_integration()->register_statement( 'watched', [
+            $body = NELC_Integration()->register_statment( 'watched', [
                 'name' => 'Mahmoud Hassan',
                 'email' => 'betalamoud@gmail.com',
                 'lessonUrl'=> '/courseID/unitId/lessonId',
@@ -50,10 +48,10 @@ if( isset( $_POST['lrs_xapi_select_statement'] ) ){
                 'duration' => 'PT15M',
             ]);
             
-            $response = learndash_nelc_integration()->register_interactions( $body );
+            $response = NELC_Integration()->register_interactions( $body );
         break;
         case 'completed_lesson':
-            $body = learndash_nelc_integration()->register_statement( 'completed', [
+            $body = NELC_Integration()->register_statment( 'completed', [
                 'name' => 'Mahmoud Hassan',
                 'email' => 'betalamoud@gmail.com',
                 'lessonUrl'=> '/courseID/unitId/lessonId',
@@ -66,10 +64,10 @@ if( isset( $_POST['lrs_xapi_select_statement'] ) ){
                 'courseDesc' => 'course Desc',
             ]);
             
-            $response = learndash_nelc_integration()->register_interactions( $body );
+            $response = NELC_Integration()->register_interactions( $body );
         break;
         case 'completed_unit':
-            $body = learndash_nelc_integration()->register_statement( 'completedUnit', [
+            $body = NELC_Integration()->register_statment( 'completedUnit', [
                 'name' => 'Mahmoud Hassan',
                 'email' => 'betalamoud@gmail.com',
                 'unitUrl'=> '/courseID/unitId',
@@ -82,10 +80,10 @@ if( isset( $_POST['lrs_xapi_select_statement'] ) ){
                 'courseDesc' => 'course Desc',
             ]);
             
-            $response = learndash_nelc_integration()->register_interactions( $body );
+            $response = NELC_Integration()->register_interactions( $body );
         break;
         case 'progressed':
-            $body = learndash_nelc_integration()->register_statement( 'progressed', [
+            $body = NELC_Integration()->register_statment( 'progressed', [
                 'name' => 'Mahmoud Hassan',
                 'email' => 'betalamoud@gmail.com',
                 'courseId' => '123',
@@ -97,10 +95,10 @@ if( isset( $_POST['lrs_xapi_select_statement'] ) ){
                 'completion' => true,
             ]);
             
-            $response = learndash_nelc_integration()->register_interactions( $body );
+            $response = NELC_Integration()->register_interactions( $body );
         break;
         case 'attempted':
-            $body = learndash_nelc_integration()->register_statement( 'attempted', [
+            $body = NELC_Integration()->register_statment( 'attempted', [
                 'name' => 'Mahmoud Hassan',
                 'email' => 'betalamoud@gmail.com',
                 'quizUrl' => '/unitId/quizId',
@@ -120,10 +118,10 @@ if( isset( $_POST['lrs_xapi_select_statement'] ) ){
                 'success' => true,
             ]);
             
-            $response = learndash_nelc_integration()->register_interactions( $body );
+            $response = NELC_Integration()->register_interactions( $body );
         break;
         case 'completed_course':
-            $body = learndash_nelc_integration()->register_statement( 'completedCourse', [
+            $body = NELC_Integration()->register_statment( 'completedCourse', [
                 'name' => 'Mahmoud Hassan',
                 'email' => 'betalamoud@gmail.com',
                 'courseId' => '123',
@@ -133,10 +131,10 @@ if( isset( $_POST['lrs_xapi_select_statement'] ) ){
                 'inst_email' => 'mrhassan@test.com',
             ]);
             
-            $response = learndash_nelc_integration()->register_interactions( $body );
+            $response = NELC_Integration()->register_interactions( $body );
         break;
         case 'earned':
-            $body = learndash_nelc_integration()->register_statement( 'earned', [
+            $body = NELC_Integration()->register_statment( 'earned', [
                 'name' => 'Mahmoud Hassan',
                 'email' => 'betalamoud@gmail.com',
                 'certUrl' => '/path/to/certificate',
@@ -146,10 +144,10 @@ if( isset( $_POST['lrs_xapi_select_statement'] ) ){
                 'courseDesc' => 'course Desc'
             ]);
             
-            $response = learndash_nelc_integration()->register_interactions( $body );
+            $response = NELC_Integration()->register_interactions( $body );
         break;
         case 'rated':
-            $body = learndash_nelc_integration()->register_statement( 'rated', [
+            $body = NELC_Integration()->register_statment( 'rated', [
                 'name' => 'Mahmoud Hassan',
                 'email' => 'betalamoud@gmail.com',
                 'courseId' => '123',
@@ -164,7 +162,7 @@ if( isset( $_POST['lrs_xapi_select_statement'] ) ){
                 'comment' => 'good course',
             ]);
             
-            $response = learndash_nelc_integration()->register_interactions( $body );
+            $response = NELC_Integration()->register_interactions( $body );
         break;
         
         default:
@@ -174,6 +172,7 @@ if( isset( $_POST['lrs_xapi_select_statement'] ) ){
     }
 
         //print_r($response);
+
         if (is_wp_error($response)) {
             // $result is a WP_Error
             $error_message = $response->get_error_message();
@@ -184,23 +183,25 @@ if( isset( $_POST['lrs_xapi_select_statement'] ) ){
                 $html .= $error_message;
             $html .= '</pre>';
         } else {
-
             $html .= '<h2 style="direction: ltr;">'.$test.'</h2>';
             $html .= '<h2 style="direction: ltr;">Response</h2>';
             $html .= '<pre style="background: #fff; direction: ltr;padding: 16px;">';
-                $html .= !is_wp_error( $response->response ) && json_encode($response->response) ? json_encode($response->response) : 'خطأ غير متوقع، برجاء التأكد من بيانات الإتصال';
+                $html .= !is_wp_error( $response['response'] ) && json_encode($response['response']) ? json_encode($response['response']) : 'خطأ غير متوقع، برجاء التأكد من بيانات الإتصال';
             $html .= '</pre>';
     
             $html .= '<h2 style="direction: ltr;">Body</h2>';
             $html .= '<pre style="background: #fff; direction: ltr;padding: 16px;">';
-                $html .= !is_wp_error( $response->body ) ? $response->body : 'خطأ غير متوقع، برجاء التأكد من بيانات الإتصال';
+                $html .= !is_wp_error( $response['body'] ) ? $response['body'] : 'خطأ غير متوقع، برجاء التأكد من بيانات الإتصال';
             $html .= '</pre>';
     
             $html .= '<h2 style="direction: ltr;">Statement</h2>';
             $html .= '<pre style="background: black; color:#fff; direction: ltr;padding: 16px;">';
-                //$html .= json_encode($body);
+                $html .= json_encode($body);
             $html .= '</pre>';
         }
+
+
+    
 
 }
 

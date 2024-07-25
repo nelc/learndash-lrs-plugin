@@ -2,7 +2,7 @@
 /**
  * Statements functions file.
  *
- * @package WordPress Plugin Template/Includes
+ * @package NELC Integration/Includes
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Statements functions class.
  */
-class Learndash_NELC_integration_statements {
+class NELC_Integration_Statements {
 
 	/**
 	 * The name for the Statements.
@@ -21,44 +21,44 @@ class Learndash_NELC_integration_statements {
 	 * @access  public
 	 * @since   1.0.2
 	 */
-	public $statement;
+	public $statment;
 	/**
-	 * The array of statement arguments
+	 * The array of statment arguments
 	 *
 	 * @var     array
 	 * @access  public
 	 * @since   1.0.2
 	 */
-	public $statement_args;
+	public $statment_args;
 
 	/**
-	 * statement constructor.
+	 * statment constructor.
 	 *
-	 * @param string $statement statement variable nnam.
-	 * @param array  $tax_args statement additional args.
+	 * @param string $statment statment variable nnam.
+	 * @param array  $tax_args statment additional args.
 	 */
-	public function __construct( $statement = '', $tax_args = array() ) {
+	public function __construct( $statment = '', $tax_args = array() ) {
 
-		if ( ! $statement || ! $tax_args ) {
+		if ( ! $statment || ! $tax_args ) {
 			return;
 		}
 
-		$this->statement = $statement;
-		//$this->statement_args = $tax_args;
+		$this->statment = $statment;
+		//$this->statment_args = $tax_args;
         $browser = get_browser(null, true);
         $br_os = $browser["platform"];
         $br_name = $browser["browser"];
         $br_ver = $browser['version'];
 
         $plt_lang = str_contains(get_locale(), 'ar') ? 'ar-SA' : 'en-US';
-        $platform = get_option( 'lrs_xapi_platform' );
-        $platformAr = get_option( 'lrs_xapi_platform_ar_name' );
-        $platformEn = get_option( 'lrs_xapi_platform_en_name' );
+        $platform = get_option( 'lnx_xapi_platform' );
+        $platformAr = get_option( 'lnx_xapi_platform_ar_name' );
+        $platformEn = get_option( 'lnx_xapi_platform_en_name' );
         
-        switch ( $this->statement ) {
+        switch ( $this->statment ) {
             case "registered":
     
-                $this->statement_args =
+                $this->statment_args =
                 array(
                     'actor' => array(
                                 'name' => $tax_args['name'],
@@ -99,7 +99,7 @@ class Learndash_NELC_integration_statements {
     
                 break;
             case "initialized":
-                $this->statement_args =
+                $this->statment_args =
                 array(
                     'actor' => array(
                                 'name' => $tax_args['name'],
@@ -140,7 +140,7 @@ class Learndash_NELC_integration_statements {
 
                 break;
             case "watched":
-                $this->statement_args =
+                $this->statment_args =
                 array(
                     'actor' => array(
                                 'name' => $tax_args['name'],
@@ -196,7 +196,7 @@ class Learndash_NELC_integration_statements {
                 );
             break;
             case "completed":
-                $this->statement_args = array(
+                $this->statment_args = array(
                     'actor' => array(
                                 'name' => $tax_args['name'],
                                 'mbox'  => 'mailto:'.$tax_args['email'],
@@ -253,7 +253,7 @@ class Learndash_NELC_integration_statements {
                 );
             break;
             case "completedUnit":
-                $this->statement_args = array(
+                $this->statment_args = array(
                     'actor' => array(
                                 'name' => $tax_args['name'],
                                 'mbox'  => 'mailto:'.$tax_args['email'],
@@ -311,7 +311,7 @@ class Learndash_NELC_integration_statements {
                 );
             break;
             case "progressed":
-                $this->statement_args = array(
+                $this->statment_args = array(
                     'actor' => array(
                         'name' => $tax_args['name'],
                         'mbox'  => 'mailto:'.$tax_args['email'],
@@ -356,7 +356,7 @@ class Learndash_NELC_integration_statements {
                 );
             break;
             case "attempted":
-                $this->statement_args = array(
+                $this->statment_args = array(
                     'actor' => array(
                         'name' => $tax_args['name'],
                         'mbox'  => 'mailto:'.$tax_args['email'],
@@ -424,7 +424,7 @@ class Learndash_NELC_integration_statements {
                 );
             break;
             case "completedCourse":
-                $this->statement_args = array(
+                $this->statment_args = array(
                     'actor' => array(
                                 'name' => $tax_args['name'],
                                 'mbox'  => 'mailto:'.$tax_args['email'],
@@ -464,7 +464,7 @@ class Learndash_NELC_integration_statements {
                 );
             break;
             case "earned":
-                $this->statement_args = array(
+                $this->statment_args = array(
                     'actor' => array(
                                 'name' => $tax_args['name'],
                                 'mbox'  => 'mailto:'.$tax_args['email'],
@@ -511,7 +511,7 @@ class Learndash_NELC_integration_statements {
                 );
             break;
             case "rated":
-                $this->statement_args = array(
+                $this->statment_args = array(
                     'actor' => array(
                         'name' => $tax_args['name'],
                         'mbox'  => 'mailto:'.$tax_args['email'],
@@ -561,14 +561,9 @@ class Learndash_NELC_integration_statements {
             default:
                 echo "mmmmmmmmmmmmmmmmmmmmmmmmmmm";
             }
-		// Register statement.
-		//add_action( 'init', array( $this, 'register_statement' ) );
+		// Register statment.
+		//add_action( 'init', array( $this, 'register_statment' ) );
 	}
-
-    // public function register_statement()
-    // {
-
-    // }
 
 
 }

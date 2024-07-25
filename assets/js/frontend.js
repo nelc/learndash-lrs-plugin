@@ -1,7 +1,7 @@
 /**
- * Learndash NELC Integration frontend js.
+ * NELC Integration frontend js.
  *
- *  @package Learndash NELC Integration/JS
+ *  @package WordPress NELC Integration/JS
  */
 
 jQuery( document ).ready(

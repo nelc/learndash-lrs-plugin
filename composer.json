@@ -1,9 +1,9 @@
 {
 	"name": "nelc/learndash-lrs-plugin",
 	"license": "GPL-2.0-or-later",
-	"description": "The Learndash NELC Integration WordPress plugin is tailored to seamlessly connect with the National Center for E-Learning in Saudi Arabia. It facilitates the transmission of all learner activities, from course registration to certificate attainment, ensuring a smooth and efficient process.",
+	"description": "Lamoud NELC Integration wordprees plugin, It was launched specifically to link with the National Center for E-Learning in Saudi Arabia, so that the tool sends all the activities of the trainees, starting from registering for the course until obtaining the certificate.",
 	"keywords": [
-		"wordpress", "nelc", "Integration", "xapi", "lamoud", "Learndash", "NELC", "lrs"
+		"wordpress", "wp", "nelc"
 	],
 	"support": {
 		"issues": "https://github.com/nelc/learndash-lrs-plugin"

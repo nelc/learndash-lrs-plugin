@@ -2,7 +2,7 @@
 /**
  * Settings class file.
  *
- * @package Learndash NELC Integration/Settings
+ * @package /Settings
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,14 +12,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Settings class.
  */
-class Learndash_NELC_integration_Settings {
+class NELC_Integration_Settings {
 
 	/**
-	 * The single instance of Learndash_NELC_integration_Settings.
+	 * The single instance of NELC_Integration_Settings.
 	 *
 	 * @var     object
 	 * @access  private
-	 * @since   1.0.0
+	 * @since   1.0.2
 	 */
 	private static $_instance = null; //phpcs:ignore
 
@@ -28,7 +28,7 @@ class Learndash_NELC_integration_Settings {
 	 *
 	 * @var     object
 	 * @access  public
-	 * @since   1.0.0
+	 * @since   1.0.2
 	 */
 	public $parent = null;
 
@@ -37,7 +37,7 @@ class Learndash_NELC_integration_Settings {
 	 *
 	 * @var     string
 	 * @access  public
-	 * @since   1.0.0
+	 * @since   1.0.2
 	 */
 	public $base = '';
 
@@ -46,7 +46,7 @@ class Learndash_NELC_integration_Settings {
 	 *
 	 * @var     array
 	 * @access  public
-	 * @since   1.0.0
+	 * @since   1.0.2
 	 */
 	public $settings = array();
 
@@ -58,7 +58,7 @@ class Learndash_NELC_integration_Settings {
 	public function __construct( $parent ) {
 		$this->parent = $parent;
 
-		$this->base = 'lrs_';
+		$this->base = 'lnx_';
 
 		// Initialise settings.
 		add_action( 'init', array( $this, 'init_settings' ), 11 );
@@ -128,8 +128,8 @@ class Learndash_NELC_integration_Settings {
 			array(
 				'location'    => 'menu', // Possible settings: options, menu, submenu.
 				'parent_slug' => 'options-general.php',
-				'page_title'  => __( 'NELC Integration', 'learndash-nelc-integration' ),
-				'menu_title'  => __( 'NELC Integration', 'learndash-nelc-integration' ),
+				'page_title'  => __( 'NELC Integration', 'lamoud-nelc-xapi' ),
+				'menu_title'  => __( 'NELC Integration', 'lamoud-nelc-xapi' ),
 				'capability'  => 'manage_options',
 				'menu_slug'   => $this->parent->_token . '_settings',
 				'function'    => array( $this, 'settings_page' ),
@@ -158,7 +158,7 @@ class Learndash_NELC_integration_Settings {
 	public function settings_assets() {
 
 		// We're including the farbtastic script & styles here because they're needed for the colour picker
-		// If you're not including a colour picker field then you can leave these calls out as well as the farbtastic dependency for the lrs-admin-js script below.
+		// If you're not including a colour picker field then you can leave these calls out as well as the farbtastic dependency for the wpt-admin-js script below.
 		wp_enqueue_style( 'farbtastic' );
 		wp_enqueue_script( 'farbtastic' );
 
@@ -166,7 +166,7 @@ class Learndash_NELC_integration_Settings {
 		// If you're not including an image upload then you can leave this function call out.
 		wp_enqueue_media();
 
-		wp_register_script( $this->parent->_token . '-settings-js', $this->parent->assets_url . 'js/settings' . $this->parent->script_suffix . '.js', array( 'farbtastic', 'jquery' ), '1.0.0', true );
+		wp_register_script( $this->parent->_token . '-settings-js', $this->parent->assets_url . 'js/settings' . $this->parent->script_suffix . '.js', array( 'farbtastic', 'jquery' ), '1.0.2', true );
 		wp_enqueue_script( $this->parent->_token . '-settings-js' );
 	}
 
@@ -177,7 +177,7 @@ class Learndash_NELC_integration_Settings {
 	 * @return array        Modified links.
 	 */
 	public function add_settings_link( $links ) {
-		$settings_link = '<a href="options-general.php?page=' . $this->parent->_token . '_settings">' . __( 'Settings', 'learndash-nelc-integration' ) . '</a>';
+		$settings_link = '<a href="options-general.php?page=' . $this->parent->_token . '_settings">' . __( 'Settings', 'lamoud-nelc-xapi' ) . '</a>';
 		array_push( $links, $settings_link );
 		return $links;
 	}
@@ -190,103 +190,103 @@ class Learndash_NELC_integration_Settings {
 	private function settings_fields() {
 
 		$settings['general'] = array(
-			'title'       => __( 'General', 'learndash-nelc-integration' ),
-			'description' => __( 'Contact NELC for the following information:', 'learndash-nelc-integration' ),
+			'title'       => __( 'General', 'lamoud-nelc-xapi' ),
+			'description' => __( 'Contact NELC for the following information:', 'lamoud-nelc-xapi' ),
 			'fields'      => array(
 				array(
 					'id'          => 'xapi_endpoint',
-					'label'       => __( 'End-point', 'learndash-nelc-integration' ),
+					'label'       => __( 'End-point', 'lamoud-nelc-xapi' ),
 					'description' => '',
 					'type'        => 'text',
 					'default'     => '',
 					'class'     => 'regular-text',
 					'required' => 'true',
-					'placeholder' => __( 'End-point', 'learndash-nelc-integration' ),
+					'placeholder' => __( 'End-point', 'lamoud-nelc-xapi' ),
 				),
 				array(
 					'id'          => 'xapi_username',
-					'label'       => __( 'User Name', 'learndash-nelc-integration' ),
+					'label'       => __( 'User Name', 'lamoud-nelc-xapi' ),
 					'description' => '',
 					'type'        => 'text',
 					'default'     => '',
 					'class'     => 'regular-text',
 					'required' => 'true',
-					'placeholder' => __( 'User Name', 'learndash-nelc-integration' ),
+					'placeholder' => __( 'User Name', 'lamoud-nelc-xapi' ),
 				),
 				array(
 					'id'          => 'xapi_secret',
-					'label'       => __( 'Secret', 'learndash-nelc-integration' ),
+					'label'       => __( 'Secret', 'lamoud-nelc-xapi' ),
 					'description' => '',
 					'type'        => 'password',
 					'default'     => '',
 					'class'     => 'regular-text',
 					'required' => 'true',
-					'placeholder' => __( 'xapi_secret', 'learndash-nelc-integration' ),
+					'placeholder' => __( 'xapi_secret', 'lamoud-nelc-xapi' ),
 				),
 				array(
 					'id'          => 'xapi_platform',
-					'label'       => __( 'Platform', 'learndash-nelc-integration' ),
+					'label'       => __( 'Platform', 'lamoud-nelc-xapi' ),
 					'description' => '',
 					'type'        => 'text',
 					'default'     => '',
 					'class'     => 'regular-text',
 					'required' => 'true',
-					'placeholder' => __( 'Platform', 'learndash-nelc-integration' ),
+					'placeholder' => __( 'Platform', 'lamoud-nelc-xapi' ),
 				),
 				array(
 					'id'          => 'xapi_platform_ar_name',
-					'label'       => __( 'Platform Arabic Name', 'learndash-nelc-integration' ),
+					'label'       => __( 'Platform Arabic Name', 'lamoud-nelc-xapi' ),
 					'description' => '',
 					'type'        => 'text',
 					'default'     => '',
 					'class'     => 'regular-text',
 					'required' => 'true',
-					'placeholder' => __( 'Platform Arabic Name', 'learndash-nelc-integration' ),
+					'placeholder' => __( 'Platform Arabic Name', 'lamoud-nelc-xapi' ),
 				),
 				array(
 					'id'          => 'xapi_platform_en_name',
-					'label'       => __( 'Platform English Name', 'learndash-nelc-integration' ),
+					'label'       => __( 'Platform English Name', 'lamoud-nelc-xapi' ),
 					'description' => '',
 					'type'        => 'text',
 					'default'     => '',
 					'class'     => 'regular-text',
 					'required' => 'true',
-					'placeholder' => __( 'Platform English Name', 'learndash-nelc-integration' ),
+					'placeholder' => __( 'Platform English Name', 'lamoud-nelc-xapi' ),
 				),
 			),
 		);
 
 		$settings['notifications'] = array(
-			'title'       => __( 'Notifications', 'learndash-nelc-integration' ),
-			'description' => __( 'Control the notifications that appear to the trainee during the progress of the course:', 'learndash-nelc-integration' ),
+			'title'       => __( 'Notifications', 'lamoud-nelc-xapi' ),
+			'description' => __( 'Control the notifications that appear to the trainee during the progress of the course:', 'lamoud-nelc-xapi' ),
 			'fields'      => array(
 				array(
 					'id'          => 'xapi_complete_profile',
-					'label'       => __( 'Complete the profile', 'learndash-nelc-integration' ),
-					'description' => __( 'An alert appears to the trainee if the profile is not completed.', 'learndash-nelc-integration' ),
+					'label'       => __( 'Complete the profile', 'lamoud-nelc-xapi' ),
+					'description' => __( 'An alert appears to the trainee if the profile is not completed.', 'lamoud-nelc-xapi' ),
 					'type'        => 'textarea',
-					'default'     => __( 'Please complete your profile to be able to enroll in the courses', 'learndash-nelc-integration' ),
+					'default'     => __( 'Please complete your profile to be able to enroll in the courses', 'lamoud-nelc-xapi' ),
 					'class'     => 'regular-text',
-					'placeholder' => __( 'Complete the profile alert', 'learndash-nelc-integration' ),
+					'placeholder' => __( 'Complete the profile alert', 'lamoud-nelc-xapi' ),
 				),
 				array(
 					'id'          => 'xapi_courses_integrate',
-					'label'       => __( 'Integrate all courses', 'learndash-nelc-integration' ),
-					'description' => __( 'Upon activation, all courses are linked automatically. In case of cancellation, an option appears on the course settings page to unlink the course.', 'learndash-nelc-integration' ),
+					'label'       => __( 'Integrate all courses', 'lamoud-nelc-xapi' ),
+					'description' => __( 'Upon activation, all courses are linked automatically. In case of cancellation, an option appears on the course settings page to unlink the course.', 'lamoud-nelc-xapi' ),
 					'type'        => 'checkbox',
 					'class'     => 'regular-text',
 				),
 				array(
 					'id'          => 'xapi_notific',
-					'label'       => __( 'Report arrival alert', 'learndash-nelc-integration' ),
-					'description' => __( 'Show alerts stating the arrival of reports to the National Center.', 'learndash-nelc-integration' ),
+					'label'       => __( 'Report arrival alert', 'lamoud-nelc-xapi' ),
+					'description' => __( 'Show alerts stating the arrival of reports to the National Center.', 'lamoud-nelc-xapi' ),
 					'type'        => 'checkbox',
 					'class'     => 'regular-text',
 				),
 				// array(
 				// 	'id'          => 'select_box',
-				// 	'label'       => __( 'A Select Box', 'learndash-nelc-integration' ),
-				// 	'description' => __( 'A standard select box.', 'learndash-nelc-integration' ),
+				// 	'label'       => __( 'A Select Box', 'lamoud-nelc-xapi' ),
+				// 	'description' => __( 'A standard select box.', 'lamoud-nelc-xapi' ),
 				// 	'type'        => 'select',
 				// 	'options'     => array(
 				// 		'drupal'    => 'Drupal',
@@ -297,8 +297,8 @@ class Learndash_NELC_integration_Settings {
 				// ),
 				// array(
 				// 	'id'          => 'radio_buttons',
-				// 	'label'       => __( 'Some Options', 'learndash-nelc-integration' ),
-				// 	'description' => __( 'A standard set of radio buttons.', 'learndash-nelc-integration' ),
+				// 	'label'       => __( 'Some Options', 'lamoud-nelc-xapi' ),
+				// 	'description' => __( 'A standard set of radio buttons.', 'lamoud-nelc-xapi' ),
 				// 	'type'        => 'radio',
 				// 	'options'     => array(
 				// 		'superman' => 'Superman',
@@ -309,8 +309,8 @@ class Learndash_NELC_integration_Settings {
 				// ),
 				// array(
 				// 	'id'          => 'multiple_checkboxes',
-				// 	'label'       => __( 'Some Items', 'learndash-nelc-integration' ),
-				// 	'description' => __( 'You can select multiple items and they will be stored as an array.', 'learndash-nelc-integration' ),
+				// 	'label'       => __( 'Some Items', 'lamoud-nelc-xapi' ),
+				// 	'description' => __( 'You can select multiple items and they will be stored as an array.', 'lamoud-nelc-xapi' ),
 				// 	'type'        => 'checkbox_multi',
 				// 	'options'     => array(
 				// 		'square'    => 'Square',
@@ -324,13 +324,13 @@ class Learndash_NELC_integration_Settings {
 		);
 
 		$settings['integration-testing'] = array(
-			'title'       => __( 'integration testing', 'learndash-nelc-integration' ),
-			'description' => __( 'The following form enables you to test integration with the National Center for E-Learning NELC:', 'learndash-nelc-integration' ),
+			'title'       => __( 'integration testing', 'lamoud-nelc-xapi' ),
+			'description' => __( 'The following form enables you to test integration with the National Center for E-Learning NELC:', 'lamoud-nelc-xapi' ),
 			'fields'      => array(
 				array(
 					'id'          => 'xapi_select_statement',
-					'label'       => __( 'Select statement', 'learndash-nelc-integration' ),
-					'description' => __( 'Select statement.', 'learndash-nelc-integration' ),
+					'label'       => __( 'Select statement', 'lamoud-nelc-xapi' ),
+					'description' => __( 'Select statement.', 'lamoud-nelc-xapi' ),
 					'type'        => 'select',
 					'class'        => 'regular-text',
 					'options'     => array(
@@ -349,15 +349,15 @@ class Learndash_NELC_integration_Settings {
 				),
 				// array(
 				// 	'id'          => 'colour_picker',
-				// 	'label'       => __( 'Pick a colour', 'learndash-nelc-integration' ),
-				// 	'description' => __( 'This uses WordPress\' built-in colour picker - the option is stored as the colour\'s hex code.', 'learndash-nelc-integration' ),
+				// 	'label'       => __( 'Pick a colour', 'lamoud-nelc-xapi' ),
+				// 	'description' => __( 'This uses WordPress\' built-in colour picker - the option is stored as the colour\'s hex code.', 'lamoud-nelc-xapi' ),
 				// 	'type'        => 'color',
 				// 	'default'     => '#21759B',
 				// ),
 				// array(
 				// 	'id'          => 'an_image',
-				// 	'label'       => __( 'An Image', 'learndash-nelc-integration' ),
-				// 	'description' => __( 'This will upload an image to your media library and store the attachment ID in the option field. Once you have uploaded an imge the thumbnail will display above these buttons.', 'learndash-nelc-integration' ),
+				// 	'label'       => __( 'An Image', 'lamoud-nelc-xapi' ),
+				// 	'description' => __( 'This will upload an image to your media library and store the attachment ID in the option field. Once you have uploaded an imge the thumbnail will display above these buttons.', 'lamoud-nelc-xapi' ),
 				// 	'type'        => 'image',
 				// 	'default'     => '',
 				// 'class'     => 'regular-text',
@@ -365,8 +365,8 @@ class Learndash_NELC_integration_Settings {
 				// ),
 				// array(
 				// 	'id'          => 'multi_select_box',
-				// 	'label'       => __( 'A Multi-Select Box', 'learndash-nelc-integration' ),
-				// 	'description' => __( 'A standard multi-select box - the saved data is stored as an array.', 'learndash-nelc-integration' ),
+				// 	'label'       => __( 'A Multi-Select Box', 'lamoud-nelc-xapi' ),
+				// 	'description' => __( 'A standard multi-select box - the saved data is stored as an array.', 'lamoud-nelc-xapi' ),
 				// 	'type'        => 'select_multi',
 				// 	'options'     => array(
 				// 		'linux'   => 'Linux',
@@ -396,6 +396,7 @@ class Learndash_NELC_integration_Settings {
 			$current_section = '';
 			if ( isset( $_POST['tab'] ) && $_POST['tab'] ) {
 				$current_section = $_POST['tab'];
+				
 			} else {
 				if ( isset( $_GET['tab'] ) && $_GET['tab'] ) {
 					$current_section = $_GET['tab'];
@@ -465,7 +466,7 @@ class Learndash_NELC_integration_Settings {
 
 		// Build page HTML.
 		$html      = '<div class="wrap" id="' . $this->parent->_token . '_settings">' . "\n";
-			$html .= '<h2>' . __( 'NELC Integration Settings', 'learndash-nelc-integration' ) . '</h2>' . "\n";
+			$html .= '<h2>' . __( 'NELC Integration Settings', 'lamoud-nelc-xapi' ) . '</h2>' . "\n";
 
 			$tab = '';
 		//phpcs:disable
@@ -521,36 +522,35 @@ class Learndash_NELC_integration_Settings {
 				if( isset( $_GET['tab'] ) && $_GET['tab'] === 'integration-testing' ){
 					$html     .= '<p class="submit">' . "\n";
 						$html .= '<input type="hidden" name="tab" value="' . esc_attr( $tab ) . '" />' . "\n";
-						$html .= '<input name="Submit" type="submit" class="button-primary" value="' . esc_attr( __( 'Test now', 'learndash-nelc-integration' ) ) . '" />' . "\n";
+						$html .= '<input name="Submit" type="submit" class="button-primary" value="' . esc_attr( __( 'Test now', 'lamoud-nelc-xapi' ) ) . '" />' . "\n";
 					$html     .= '</p>' . "\n";
 				}else{
 					$html     .= '<p class="submit">' . "\n";
 						$html .= '<input type="hidden" name="tab" value="' . esc_attr( $tab ) . '" />' . "\n";
-						$html .= '<input name="Submit" type="submit" class="button-primary" value="' . esc_attr( __( 'Save Settings', 'learndash-nelc-integration' ) ) . '" />' . "\n";
+						$html .= '<input name="Submit" type="submit" class="button-primary" value="' . esc_attr( __( 'Save Settings', 'lamoud-nelc-xapi' ) ) . '" />' . "\n";
 					$html     .= '</p>' . "\n";
 				}
 
 			$html         .= '</form>' . "\n";
 
 			if( isset( $_GET['tab'] ) && $_GET['tab'] === 'integration-testing'  ){
-				require_once 'learndash-nelc-integration-admin_test.php';
+				require_once 'lamoud-nelc-xapi-integration-testing.php';
 			}
-			
 		$html             .= '</div>' . "\n";
 
 		echo $html; //phpcs:ignore
 	}
 
 	/**
-	 * Main Learndash_NELC_integration_Settings Instance
+	 * Main NELC_Integration_Settings Instance
 	 *
-	 * Ensures only one instance of Learndash_NELC_integration_Settings is loaded or can be loaded.
+	 * Ensures only one instance of NELC_Integration_Settings is loaded or can be loaded.
 	 *
-	 * @since 1.0.0
+	 * @since 1.0.2
 	 * @static
-	 * @see learndash_nelc_integration()
+	 * @see NELC_Integration()
 	 * @param object $parent Object instance.
-	 * @return object Learndash_NELC_integration_Settings instance
+	 * @return object NELC_Integration_Settings instance
 	 */
 	public static function instance( $parent ) {
 		if ( is_null( self::$_instance ) ) {
@@ -562,19 +562,19 @@ class Learndash_NELC_integration_Settings {
 	/**
 	 * Cloning is forbidden.
 	 *
-	 * @since 1.0.0
+	 * @since 1.0.2
 	 */
 	public function __clone() {
-		_doing_it_wrong( __FUNCTION__, esc_html( __( 'Cloning of learndash_nelc_integration_API is forbidden.' ) ), esc_attr( $this->parent->_version ) );
+		_doing_it_wrong( __FUNCTION__, esc_html( __( 'Cloning of NELC_Integration_API is forbidden.' ) ), esc_attr( $this->parent->_version ) );
 	} // End __clone()
 
 	/**
 	 * Unserializing instances of this class is forbidden.
 	 *
-	 * @since 1.0.0
+	 * @since 1.0.2
 	 */
 	public function __wakeup() {
-		_doing_it_wrong( __FUNCTION__, esc_html( __( 'Unserializing instances of learndash_nelc_integration_API is forbidden.' ) ), esc_attr( $this->parent->_version ) );
+		_doing_it_wrong( __FUNCTION__, esc_html( __( 'Unserializing instances of NELC_Integration_API is forbidden.' ) ), esc_attr( $this->parent->_version ) );
 	} // End __wakeup()
-
+	
 }

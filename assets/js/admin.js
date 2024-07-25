@@ -1,7 +1,7 @@
 /**
- * Learndash NELC Integration admin js.
+ * NELC Integration admin js.
  *
- *  @package Learndash NELC Integration/JS
+ *  @package NELC Integration
  */
 
 jQuery( document ).ready(

@@ -2,9 +2,8 @@
 /**
  * Admin API file.
  *
- * @package Learndash NELC Integration/Includes
+ * @package NELC Integration
  */
-namespace LearndashLrsPlugin\Interactions\lib;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -13,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Admin API class.
  */
-class Learndash_NELC_integration_Admin_API{
+class NELC_Integration_Admin_API {
 
 	/**
 	 * Constructor function
@@ -83,7 +82,7 @@ class Learndash_NELC_integration_Admin_API{
 			case 'text':
 			case 'url':
 			case 'email':
-				$html .= '<input id="' . esc_attr( $field['id'] ) . '" type="text" name="' . esc_attr( $option_name ) . '" placeholder="' . esc_attr( $field['placeholder'] ) . '" value="' . esc_attr( $data ) . '" />' . "\n";
+				$html .= '<input class="' . esc_attr( $field['class'] ) . '" id="' . esc_attr( $field['id'] ) . '" type="text" name="' . esc_attr( $option_name ) . '" placeholder="' . esc_attr( $field['placeholder'] ) . '" value="' . esc_attr( $data ) . '" />' . "\n";
 				break;
 
 			case 'password':
@@ -98,7 +97,7 @@ class Learndash_NELC_integration_Admin_API{
 				if ( isset( $field['max'] ) ) {
 					$max = ' max="' . esc_attr( $field['max'] ) . '"';
 				}
-				$html .= '<input id="' . esc_attr( $field['id'] ) . '" type="' . esc_attr( $field['type'] ) . '" name="' . esc_attr( $option_name ) . '" placeholder="' . esc_attr( $field['placeholder'] ) . '" value="' . esc_attr( $data ) . '"' . $min . '' . $max . '/>' . "\n";
+				$html .= '<input class="' . esc_attr( $field['class'] ) . '" id="' . esc_attr( $field['id'] ) . '" type="' . esc_attr( $field['type'] ) . '" name="' . esc_attr( $option_name ) . '" placeholder="' . esc_attr( $field['placeholder'] ) . '" value="' . esc_attr( $data ) . '"' . $min . '' . $max . '/>' . "\n";
 				break;
 
 			case 'text_secret':
@@ -111,9 +110,12 @@ class Learndash_NELC_integration_Admin_API{
 
 			case 'checkbox':
 				$checked = '';
-				if ( $data && 'on' === $data ) {
+				if ( $data && 'on' === $data) {
+					
 					$checked = 'checked="checked"';
+					
 				}
+				
 				$html .= '<input id="' . esc_attr( $field['id'] ) . '" type="' . esc_attr( $field['type'] ) . '" name="' . esc_attr( $option_name ) . '" ' . $checked . '/>' . "\n";
 				break;
 
@@ -167,8 +169,8 @@ class Learndash_NELC_integration_Admin_API{
 					$image_thumb = wp_get_attachment_thumb_url( $data );
 				}
 				$html .= '<img id="' . $option_name . '_preview" class="image_preview" src="' . $image_thumb . '" /><br/>' . "\n";
-				$html .= '<input id="' . $option_name . '_button" type="button" data-uploader_title="' . __( 'Upload an image', 'learndash-nelc-integration' ) . '" data-uploader_button_text="' . __( 'Use image', 'learndash-nelc-integration' ) . '" class="image_upload_button button" value="' . __( 'Upload new image', 'learndash-nelc-integration' ) . '" />' . "\n";
-				$html .= '<input id="' . $option_name . '_delete" type="button" class="image_delete_button button" value="' . __( 'Remove image', 'learndash-nelc-integration' ) . '" />' . "\n";
+				$html .= '<input id="' . $option_name . '_button" type="button" data-uploader_title="' . __( 'Upload an image', 'nelc-integration' ) . '" data-uploader_button_text="' . __( 'Use image', 'nelc-integration' ) . '" class="image_upload_button button" value="' . __( 'Upload new image', 'nelc-integration' ) . '" />' . "\n";
+				$html .= '<input id="' . $option_name . '_delete" type="button" class="image_delete_button button" value="' . __( 'Remove image', 'nelc-integration' ) . '" />' . "\n";
 				$html .= '<input id="' . $option_name . '" class="image_data_field" type="hidden" name="' . $option_name . '" value="' . $data . '"/><br/>' . "\n";
 				break;
 

@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Interactions functions class.
  */
-class Learndash_NELC_Integration_Interactions {
+class NELC_Integration_Interactions {
 
 	/**
 	 * The name for the Interactions.
@@ -50,12 +50,12 @@ class Learndash_NELC_Integration_Interactions {
 			return;
 		}
 
-		$this->endpoint = strval(get_option('lrs_xapi_endpoint'));
-		$this->username = strval(get_option('lrs_xapi_username'));
-		$this->secret = strval(get_option('lrs_xapi_secret'));
-		$this->platform = strval(get_option('lrs_xapi_platform'));
-		$this->platformAr = strval(get_option('lrs_xapi_platform_ar_name'));
-		$this->platformEn = strval(get_option('lrs_xapi_platform_en_name'));
+		$this->endpoint = strval(get_option('lnx_xapi_endpoint'));
+		$this->username = strval(get_option('lnx_xapi_username'));
+		$this->secret = strval(get_option('lnx_xapi_secret'));
+		$this->platform = strval(get_option('lnx_xapi_platform'));
+		$this->platformAr = strval(get_option('lnx_xapi_platform_ar_name'));
+		$this->platformEn = strval(get_option('lnx_xapi_platform_en_name'));
 		$this->body = $body;
 
 		$this->headers = array (
@@ -72,13 +72,13 @@ class Learndash_NELC_Integration_Interactions {
 	 *
 	 * @return void
 	 */
-	// public function register_interactions() {
+	public function register_interactions() {
 
-	// 	// $response = wp_remote_post( $endpoint, array (
-	// 	// 	'method'  => 'POST',
-	// 	// 	'headers' => $headers,
-	// 	// 	'body'    =>  $data
-	// 	// ));
-	// }
+		// $response = wp_remote_post( $endpoint, array (
+		// 	'method'  => 'POST',
+		// 	'headers' => $headers,
+		// 	'body'    =>  $data
+		// ));
+	}
 
 }
